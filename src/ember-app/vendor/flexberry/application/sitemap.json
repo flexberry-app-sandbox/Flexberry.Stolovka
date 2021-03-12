@@ -1,0 +1,36 @@
+﻿{
+  "applicationCaption": "Stolovka",
+  "applicationTitle": "Stolovka",
+  "items": [
+    {
+      "link": null,
+      "menuName": "stolovka",
+      "caption": "Stolovka",
+      "title": "Stolovka",
+      "children": [
+        {
+          "link": "i-i-s-stolovka-заказчик-l",
+          "menuName": null,
+          "caption": "Заказчик",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-stolovka-тип-блюда-l",
+          "menuName": null,
+          "caption": "Тип блюда",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-stolovka-заказ-l",
+          "menuName": null,
+          "caption": "Заказ",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

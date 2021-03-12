@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Заказчик",
+  "name": "IISStolovkaЗаказчикE",
+  "className": "ЗаказчикE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-stolovka-заказчик",
+      "modelProjection": "ЗаказчикE"
+    }
+  ]
+}

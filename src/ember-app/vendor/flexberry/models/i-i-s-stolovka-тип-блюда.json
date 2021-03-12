@@ -1,0 +1,54 @@
+﻿{
+  "name": "IISStolovkaТипБлюда",
+  "modelName": "i-i-s-stolovka-тип-блюда",
+  "className": "ТипБлюда",
+  "nameSpace": "IIS.Stolovka",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "название",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТипБлюдаE",
+      "modelName": "i-i-s-stolovka-тип-блюда",
+      "attrs": [
+        {
+          "name": "название",
+          "caption": "Название",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ТипБлюдаL",
+      "modelName": "i-i-s-stolovka-тип-блюда",
+      "attrs": [
+        {
+          "name": "название",
+          "caption": "Название",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

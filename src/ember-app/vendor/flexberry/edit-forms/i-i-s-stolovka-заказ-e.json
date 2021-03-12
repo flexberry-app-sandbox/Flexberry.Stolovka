@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Заказчик",
+      "projection": "ЗаказчикL",
+      "detailModelName": null
+    },
+    {
+      "master": "типБлюда",
+      "displayAttributeName": "название",
+      "required": true,
+      "relationName": "Блюдо.ТипБлюда",
+      "projection": "ТипБлюдаL",
+      "detailModelName": "i-i-s-stolovka-блюдо"
+    }
+  ],
+  "external": false,
+  "caption": "Заказ",
+  "name": "IISStolovkaЗаказE",
+  "className": "ЗаказE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-stolovka-заказ",
+      "modelProjection": "ЗаказE"
+    }
+  ]
+}

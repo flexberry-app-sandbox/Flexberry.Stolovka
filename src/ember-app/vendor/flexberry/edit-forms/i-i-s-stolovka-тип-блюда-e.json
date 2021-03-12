@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Тип блюда",
+  "name": "IISStolovkaТипБлюдаE",
+  "className": "ТипБлюдаE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-stolovka-тип-блюда",
+      "modelProjection": "ТипБлюдаE"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+﻿{
+  "name": "IISStolovkaЗаказ",
+  "modelName": "i-i-s-stolovka-заказ",
+  "className": "Заказ",
+  "nameSpace": "IIS.Stolovka",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "итог",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": false,
+      "name": "заказчик",
+      "relatedTo": "i-i-s-stolovka-заказчик",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "блюдо",
+      "relatedTo": "i-i-s-stolovka-блюдо",
+      "inverse": "заказ"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ЗаказE",
+      "modelName": "i-i-s-stolovka-заказ",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "итог",
+          "caption": "Итог",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Заказчик",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "название",
+              "caption": "Название",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "default",
+          "caption": "Заказчик",
+          "name": "заказчик",
+          "relatedTo": "i-i-s-stolovka-заказчик",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "БлюдоE",
+          "caption": "Блюдо",
+          "name": "блюдо",
+          "relatedTo": "i-i-s-stolovka-блюдо",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ЗаказL",
+      "modelName": "i-i-s-stolovka-заказ",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "итог",
+          "caption": "Итог",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Заказчик",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "название",
+              "caption": "Название",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Название",
+          "name": "заказчик",
+          "relatedTo": "i-i-s-stolovka-заказчик",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

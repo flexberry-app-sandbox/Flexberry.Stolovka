@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-stolovka-тип-блюда-e",
+  "editForm": "i-i-s-stolovka-тип-блюда-e",
+  "external": false,
+  "caption": "Тип блюда",
+  "name": "IISStolovkaТипБлюдаL",
+  "className": "ТипБлюдаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-stolovka-тип-блюда",
+      "modelProjection": "ТипБлюдаL"
+    }
+  ]
+}

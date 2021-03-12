@@ -1,0 +1,92 @@
+<h3 class="ui header">{{t "forms.i-i-s-stolovka-заказ-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-stolovka-заказ-e.дата-caption"}}</label>
+    {{
+      flexberry-simpledatetime
+      type="date"
+      placeholder=(t 'components.flexberry-datepicker.placeholder')
+      readonly=readonly
+      value=model.дата
+      class=(if (v-get validationObject "дата" "isInvalid") "error")
+      data-test-i-i-s-stolovka-заказ-e-дата=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "дата" "message")}}
+  </div>
+
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.итог
+      class=(if (v-get validationObject "итог" "isInvalid") "error")
+      label=(t "forms.i-i-s-stolovka-заказ-e.итог-caption")
+      data-test-i-i-s-stolovka-заказ-e-итог=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "итог" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-stolovka-заказ-e.заказчик-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.заказчик
+      relationName="заказчик"
+      projection="ЗаказчикL"
+      title=(t "forms.i-i-s-stolovka-заказ-e.заказчик-caption")
+      readonly=readonly
+      componentName="заказчикLookup"
+      class=(if (v-get validationObject "заказчик" "isInvalid") "error")
+      data-test-i-i-s-stolovka-заказ-e-заказчик=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "заказчик" "message")}}
+  </div>
+
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.заказчик.название
+      class=(if (v-get validationObject.заказчик "название" "isInvalid") "error")
+      label=(t "forms.i-i-s-stolovka-заказ-e.заказчик.название-caption")
+      data-test-i-i-s-stolovka-заказ-e-заказчик-название=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject.заказчик "название" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-stolovka-заказ-e.блюдо-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="блюдоGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.блюдо
+      content=model.блюдо
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationObject "блюдо" "isInvalid") "error")
+      data-test-i-i-s-stolovka-заказ-e-блюдо=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "блюдо" "message")}}
+  </div>
+</form>

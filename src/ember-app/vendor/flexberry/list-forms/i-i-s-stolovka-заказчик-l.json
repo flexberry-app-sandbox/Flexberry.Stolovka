@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-stolovka-заказчик-e",
+  "editForm": "i-i-s-stolovka-заказчик-e",
+  "external": false,
+  "caption": "Заказчик",
+  "name": "IISStolovkaЗаказчикL",
+  "className": "ЗаказчикL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-stolovka-заказчик",
+      "modelProjection": "ЗаказчикL"
+    }
+  ]
+}
