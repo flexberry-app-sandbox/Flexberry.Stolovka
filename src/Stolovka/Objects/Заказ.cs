@@ -35,6 +35,7 @@ namespace IIS.Stolovka
             "Заказчик.Название as \'Название\'"})]
     [AssociatedDetailViewAttribute("ЗаказE", "Блюдо", "БлюдоE", true, "", "Блюдо", true, new string[] {
             ""})]
+    [MasterViewDefineAttribute("ЗаказE", "Заказчик", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "")]
     [View("ЗаказL", new string[] {
             "Дата as \'Дата\'",
             "Итог as \'Итог\'",

@@ -75,7 +75,7 @@
             }
           ],
           "index": 2,
-          "type": "default",
+          "type": "standard",
           "caption": "Заказчик",
           "name": "заказчик",
           "relatedTo": "i-i-s-stolovka-заказчик",
