@@ -54,6 +54,9 @@
       choose="showLookupDialog"
       remove="removeLookupValue"
       value=model.заказчик
+      class=(if (v-get validationObject "заказчик" "isInvalid") "error")
+      displayAttributeName="название"
+      autocomplete=true
       relationName="заказчик"
       projection="ЗаказчикL"
       title=(t "forms.i-i-s-stolovka-заказ-e.заказчик-caption")

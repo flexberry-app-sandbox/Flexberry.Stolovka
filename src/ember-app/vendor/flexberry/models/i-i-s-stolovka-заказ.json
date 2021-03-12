@@ -61,8 +61,8 @@
       ],
       "belongsTo": [
         {
-          "lookupValue": null,
-          "lookupValueField": null,
+          "lookupValue": "Название",
+          "lookupValueField": "название",
           "relationName": "Заказчик",
           "belongsTo": [],
           "hidden": false,
